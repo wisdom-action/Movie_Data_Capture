@@ -21,12 +21,12 @@ jobs:
 
       - name: Install UPX
         uses: crazy-max/ghaction-upx@v2
-        if: matrix.os == 'windows-latest' || matrix.os == 'ubuntu-latest'
+        if: matrix.os == 'windows-latest' || matrix.os == 'ubuntu-latest || matrix.os == 'ubuntu-20.04'
         with:
           install-only: true
 
       - name: UPX version
-        if: matrix.os == 'windows-latest' || matrix.os == 'ubuntu-latest'
+        if: matrix.os == 'windows-latest' || matrix.os == 'ubuntu-latest || matrix.os == 'ubuntu-20.04'
         run: upx --version
 
       - name: Setup Python 3.10
